@@ -1,0 +1,272 @@
+[
+  {
+    "title": "Manzanas",
+    "description": "Manzanas frescas de la región",
+    "price": 2.5,
+    "thumbnail": "/images/apples.jpg",
+    "code": "V001",
+    "stock": 50,
+    "id": 1
+  },
+  {
+    "title": "Bananas",
+    "description": "Bananas maduras y sabrosas",
+    "price": 1.8,
+    "thumbnail": "/images/bananas.jpg",
+    "code": "V002",
+    "stock": 40,
+    "id": 2
+  },
+  {
+    "title": "Zanahorias",
+    "description": "Zanahorias orgánicas y crujientes",
+    "price": 1.2,
+    "thumbnail": "/images/carrots.jpg",
+    "code": "V003",
+    "stock": 30,
+    "id": 3
+  },
+  {
+    "title": "Tomates",
+    "description": "Tomates jugosos y rojos",
+    "price": 3,
+    "thumbnail": "/images/tomatoes.jpg",
+    "code": "V004",
+    "stock": 25,
+    "id": 4
+  },
+  {
+    "title": "Papas",
+    "description": "Papas frescas y listas para cocinar",
+    "price": 2,
+    "thumbnail": "/images/potatoes.jpg",
+    "code": "V005",
+    "stock": 35,
+    "id": 5
+  },
+  {
+    "title": "Lechuga",
+    "description": "Lechuga hidropónica de calidad",
+    "price": 2.8,
+    "thumbnail": "/images/lettuce.jpg",
+    "code": "V006",
+    "stock": 20,
+    "id": 6
+  },
+  {
+    "title": "Cebollas",
+    "description": "Cebollas amarillas y sabrosas",
+    "price": 1.5,
+    "thumbnail": "/images/onions.jpg",
+    "code": "V007",
+    "stock": 45,
+    "id": 7
+  },
+  {
+    "title": "Pimientos",
+    "description": "Pimientos rojos y verdes",
+    "price": 4,
+    "thumbnail": "/images/peppers.jpg",
+    "code": "V008",
+    "stock": 28,
+    "id": 8
+  },
+  {
+    "title": "Espinacas",
+    "description": "Espinacas frescas y nutritivas",
+    "price": 2.3,
+    "thumbnail": "/images/spinach.jpg",
+    "code": "V009",
+    "stock": 22,
+    "id": 9
+  },
+  {
+    "title": "Ajos",
+    "description": "Ajos orgánicos para dar sabor a tus platos",
+    "price": 1.7,
+    "thumbnail": "/images/garlic.jpg",
+    "code": "V010",
+    "stock": 33,
+    "id": 10
+  },
+  {
+    "title": "Manzanas",
+    "description": "Manzanas frescas de la región",
+    "price": 2.5,
+    "thumbnail": "/images/apples.jpg",
+    "code": "V001",
+    "stock": 50,
+    "id": 11
+  },
+  {
+    "title": "Bananas",
+    "description": "Bananas maduras y sabrosas",
+    "price": 1.8,
+    "thumbnail": "/images/bananas.jpg",
+    "code": "V002",
+    "stock": 40,
+    "id": 12
+  },
+  {
+    "title": "Zanahorias",
+    "description": "Zanahorias orgánicas y crujientes",
+    "price": 1.2,
+    "thumbnail": "/images/carrots.jpg",
+    "code": "V003",
+    "stock": 30,
+    "id": 13
+  },
+  {
+    "title": "Tomates",
+    "description": "Tomates jugosos y rojos",
+    "price": 3,
+    "thumbnail": "/images/tomatoes.jpg",
+    "code": "V004",
+    "stock": 25,
+    "id": 14
+  },
+  {
+    "title": "Papas",
+    "description": "Papas frescas y listas para cocinar",
+    "price": 2,
+    "thumbnail": "/images/potatoes.jpg",
+    "code": "V005",
+    "stock": 35,
+    "id": 15
+  },
+  {
+    "title": "Lechuga",
+    "description": "Lechuga hidropónica de calidad",
+    "price": 2.8,
+    "thumbnail": "/images/lettuce.jpg",
+    "code": "V006",
+    "stock": 20,
+    "id": 16
+  },
+  {
+    "title": "Cebollas",
+    "description": "Cebollas amarillas y sabrosas",
+    "price": 1.5,
+    "thumbnail": "/images/onions.jpg",
+    "code": "V007",
+    "stock": 45,
+    "id": 17
+  },
+  {
+    "title": "Pimientos",
+    "description": "Pimientos rojos y verdes",
+    "price": 4,
+    "thumbnail": "/images/peppers.jpg",
+    "code": "V008",
+    "stock": 28,
+    "id": 18
+  },
+  {
+    "title": "Espinacas",
+    "description": "Espinacas frescas y nutritivas",
+    "price": 2.3,
+    "thumbnail": "/images/spinach.jpg",
+    "code": "V009",
+    "stock": 22,
+    "id": 19
+  },
+  {
+    "title": "Ajos",
+    "description": "Ajos orgánicos para dar sabor a tus platos",
+    "price": 1.7,
+    "thumbnail": "/images/garlic.jpg",
+    "code": "V010",
+    "stock": 33,
+    "id": 20
+  },
+  {
+    "title": "Manzanas",
+    "description": "Manzanas frescas de la región",
+    "price": 2.5,
+    "thumbnail": "/images/apples.jpg",
+    "code": "V001",
+    "stock": 50,
+    "id": 21
+  },
+  {
+    "title": "Bananas",
+    "description": "Bananas maduras y sabrosas",
+    "price": 1.8,
+    "thumbnail": "/images/bananas.jpg",
+    "code": "V002",
+    "stock": 40,
+    "id": 22
+  },
+  {
+    "title": "Zanahorias",
+    "description": "Zanahorias orgánicas y crujientes",
+    "price": 1.2,
+    "thumbnail": "/images/carrots.jpg",
+    "code": "V003",
+    "stock": 30,
+    "id": 23
+  },
+  {
+    "title": "Tomates",
+    "description": "Tomates jugosos y rojos",
+    "price": 3,
+    "thumbnail": "/images/tomatoes.jpg",
+    "code": "V004",
+    "stock": 25,
+    "id": 24
+  },
+  {
+    "title": "Papas",
+    "description": "Papas frescas y listas para cocinar",
+    "price": 2,
+    "thumbnail": "/images/potatoes.jpg",
+    "code": "V005",
+    "stock": 35,
+    "id": 25
+  },
+  {
+    "title": "Lechuga",
+    "description": "Lechuga hidropónica de calidad",
+    "price": 2.8,
+    "thumbnail": "/images/lettuce.jpg",
+    "code": "V006",
+    "stock": 20,
+    "id": 26
+  },
+  {
+    "title": "Cebollas",
+    "description": "Cebollas amarillas y sabrosas",
+    "price": 1.5,
+    "thumbnail": "/images/onions.jpg",
+    "code": "V007",
+    "stock": 45,
+    "id": 27
+  },
+  {
+    "title": "Pimientos",
+    "description": "Pimientos rojos y verdes",
+    "price": 4,
+    "thumbnail": "/images/peppers.jpg",
+    "code": "V008",
+    "stock": 28,
+    "id": 28
+  },
+  {
+    "title": "Espinacas",
+    "description": "Espinacas frescas y nutritivas",
+    "price": 2.3,
+    "thumbnail": "/images/spinach.jpg",
+    "code": "V009",
+    "stock": 22,
+    "id": 29
+  },
+  {
+    "title": "Ajos",
+    "description": "Ajos orgánicos para dar sabor a tus platos",
+    "price": 1.7,
+    "thumbnail": "/images/garlic.jpg",
+    "code": "V010",
+    "stock": 33,
+    "id": 30
+  }
+]
