@@ -1,14 +1,16 @@
 // Product.js
 class Product {
-    constructor(title, description, price, thumbnail, code, stock) {
-      this.title = title;
-      this.description = description;
-      this.price = price;
-      this.thumbnail = thumbnail;
-      this.code = code;
-      this.stock = stock;
-    }
+  constructor(id, title, description, code, price, stock, category, thumbnails) {
+    this.id = id;
+    this.title = title;
+    this.description = description;
+    this.code = code;
+    this.price = price;
+    this.status = true;
+    this.stock = stock;
+    this.category = category;
+    this.thumbnails = thumbnails || [];
   }
-  
-  module.exports = Product;
-  
+}
+
+module.exports = Product;

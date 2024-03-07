@@ -1,15 +1,14 @@
 // ProductManager.js
-const fs = require('fs');
+const fs = require('fs/promises');
 
 class ProductManager {
-  constructor(filePath) {
-    this.path = filePath;
-    this.products = this.loadProducts();
+  constructor(productsFilePath) {
+    this.productsFilePath = productsFilePath;
   }
 
-  loadProducts() {
+  async loadProducts() {
     try {
-      const data = fs.readFileSync(this.path, 'utf8');
+      const data = await fs.readFile(this.productsFilePath, 'utf8');
       return JSON.parse(data) || [];
     } catch (error) {
       console.error(`Error loading products from file: ${error.message}`);
@@ -17,68 +16,98 @@ class ProductManager {
     }
   }
 
-  saveProducts() {
+  async saveProducts(products) {
     try {
-      const data = JSON.stringify(this.products, null, 2);
-      fs.writeFileSync(this.path, data, 'utf8');
+      await fs.writeFile(this.productsFilePath, JSON.stringify(products, null, 2), 'utf8');
     } catch (error) {
       console.error(`Error saving products to file: ${error.message}`);
     }
   }
 
   generateId() {
-    return this.products.length + 1;
+    return Date.now().toString(36) + Math.random().toString(36).substr(2);
   }
 
-  addProduct(product) {
+  async addProduct(product) {
     product.id = this.generateId();
-    this.products.push(product);
-    this.saveProducts();
-    console.log(`Product '${product.title}' added successfully.`);
-  }
 
-  getProductById(productId) {
-    const foundProduct = this.products.find((product) => product.id === productId);
-    return foundProduct;
-  }
-
-  updateProduct(productId, updatedProduct) {
-    const index = this.products.findIndex((product) => product.id === productId);
-    if (index !== -1) {
-      this.products[index] = { ...this.products[index], ...updatedProduct };
-      this.saveProducts();
-      console.log(`Product with ID ${productId} updated successfully.`);
-    } else {
-      console.log(`Product with ID ${productId} not found.`);
+    try {
+      const products = await this.loadProducts();
+      products.push(product);
+      await this.saveProducts(products);
+      console.log(`Product '${product.title}' added successfully.`);
+    } catch (error) {
+      console.error(`Error adding product: ${error.message}`);
     }
   }
 
-  deleteProduct(productId) {
-    const index = this.products.findIndex((product) => product.id === productId);
-    if (index !== -1) {
-      const deletedProduct = this.products.splice(index, 1)[0];
-      this.saveProducts();
-      console.log(`Product with ID ${productId} deleted successfully.`);
-      return deletedProduct;
-    } else {
-      console.log(`Product with ID ${productId} not found.`);
+  async getProductById(productId) {
+    try {
+      const products = await this.loadProducts();
+      return products.find((product) => product.id === productId);
+    } catch (error) {
+      console.error(`Error getting product by ID: ${error.message}`);
       return null;
     }
   }
 
-  listProducts() {
-    console.log("Product List:");
-    this.products.forEach((product) => {
-      console.log(product);
-    });
+  async updateProduct(productId, updatedFields) {
+    try {
+      const products = await this.loadProducts();
+      const index = products.findIndex((product) => product.id === productId);
+
+      if (index !== -1) {
+        products[index] = { ...products[index], ...updatedFields };
+        await this.saveProducts(products);
+        console.log(`Product with ID ${productId} updated successfully.`);
+      } else {
+        console.log(`Product with ID ${productId} not found.`);
+      }
+    } catch (error) {
+      console.error(`Error updating product: ${error.message}`);
+    }
   }
 
-  getProducts(limit) {
-    let result = this.products;
-    if (limit) {
-      result = result.slice(0, limit);
+  async deleteProduct(productId) {
+    try {
+      const products = await this.loadProducts();
+      const index = products.findIndex((product) => product.id === productId);
+
+      if (index !== -1) {
+        const deletedProduct = products.splice(index, 1)[0];
+        await this.saveProducts(products);
+        console.log(`Product with ID ${productId} deleted successfully.`);
+        return deletedProduct;
+      } else {
+        console.log(`Product with ID ${productId} not found.`);
+        return null;
+      }
+    } catch (error) {
+      console.error(`Error deleting product: ${error.message}`);
+      return null;
     }
-    return result;
+  }
+
+  async listProducts() {
+    try {
+      const products = await this.loadProducts();
+      console.log("Product List:");
+      products.forEach((product) => {
+        console.log(product);
+      });
+    } catch (error) {
+      console.error(`Error listing products: ${error.message}`);
+    }
+  }
+
+  async getProducts(limit) {
+    try {
+      const products = await this.loadProducts();
+      return limit ? products.slice(0, limit) : products;
+    } catch (error) {
+      console.error(`Error getting products: ${error.message}`);
+      return [];
+    }
   }
 }
 

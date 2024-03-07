@@ -268,5 +268,18 @@
     "code": "V010",
     "stock": 33,
     "id": 30
+  },
+  {
+    "id": "ltdmvoay343rowi8sfk",
+    "title": "Ajos orgánicos para dar sabor a tus platos",
+    "description": "V010",
+    "code": 1.7,
+    "price": 33,
+    "status": true,
+    "stock": "Especias",
+    "category": [
+      "/images/garlic.jpg"
+    ],
+    "thumbnails": []
   }
 ]
